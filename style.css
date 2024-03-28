@@ -239,6 +239,64 @@ body {
     left: 10px;
 }
 
+/*=========Other Products========*/
+
+
+#o-products {
+    background-color: rgb(234, 234, 255);
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* .o-image {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(20, 20, 20);
+    border-radius: 10px;
+    width: 320px;
+    height:200px;
+    color: white;
+    align-content: center;
+    position: relative;
+    
+    margin-top: 70px;
+} */
+
+.o-image img{
+    width: 400px;
+    border-radius: 2px;
+    background-color: rgb(199, 9, 9);
+    
+}
+
+.o-text {
+    padding-top: 80px;
+    /* padding-left: 150px;
+    padding-right: 100px; */
+}
+
+.o-text h3 {
+    color: rgb(199, 9, 9);
+    font-family: "Open Sans", sans-serif;
+}
+
+.o-text p {
+    width: 300px;
+    color: rgb(39, 39, 39);
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
 
 
 /*=========Responsiveness For Mobile========*/
