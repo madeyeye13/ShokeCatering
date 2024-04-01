@@ -268,7 +268,7 @@ body {
 .o-image img{
     width: 400px;
     border-radius: 2px;
-    background-color: rgb(199, 9, 9);
+    /* background-color: rgb(199, 9, 9); */
     
 }
 
@@ -468,6 +468,38 @@ body {
     .icontext p {
         font-size: 15px;
     }
+
+/*==========Query for All Sizes============*/
+
+    #o-products {
+        background-color: rgb(234, 234, 255);
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 70px;
+    }
+
+
+
+    .o-text {
+        justify-content: center;
+        padding-left: 15px;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+
+    .o-text p {
+        left: 15px;
+        margin-left: 25px;
+    }
+
+
+    .o-image img {
+        padding-top: 40px;
+    }
+
 
 
 
