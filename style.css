@@ -278,7 +278,7 @@ body {
 
 
 #standard {
-    background-color: rgb(234, 234, 255);
+    background-color: #fff4f3;
     height: 200px;
 }
 
@@ -322,7 +322,7 @@ body {
 
 
 #o-products {
-    background-color: rgb(234, 234, 255);
+    background-color: #fff4f3;
     justify-content: space-evenly;
     display: flex;
     flex-direction: row;
