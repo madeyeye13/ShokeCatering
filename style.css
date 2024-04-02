@@ -304,7 +304,10 @@ body {
 /*=============MediaQuery for Hero==========*/
 
 
-@media(max-width:500px){
+@media(max-width:390px){
+
+
+
    #hero-image {
     display: flex;
     flex-direction: column;
