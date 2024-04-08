@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-
 * {
     margin: 0;
     padding: 0;
@@ -14,18 +13,17 @@
 
 body {
     background-color: white;
+    max-width: 100%;
 }
 
 
-/*=============Header==========*/
-
-
 .header {
-    height: 18dvh;
+    max-width: 100%;
+    height: 5rem;
     display: flex;
     align-content: center;
     justify-content: space-between;
-    padding: 30px;
+    padding: 5%;
     background-color: white;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
     background-size: cover;
@@ -34,6 +32,7 @@ body {
     z-index: 100;
 }
 
+
 .logo img {
     width: 70px;
 }
@@ -41,6 +40,12 @@ body {
 .cart span {
     font-size: 50px;
 }
+
+.greetings {
+    display: none;
+}
+
+/*=============Delivery Message==========*/
 
 
 #container {
@@ -76,44 +81,35 @@ body {
 
 
 
-
-
-
-
-
-
-
-.greetings {
-    font-family: "Open Sans", sans-serif;
-    font-size: 25px;
-}
-
-
-/*=============Hero Section==========*/
+  /*=============Hero Section==========*/
 
 
 #hero-image {
     display: flex;
+    flex-direction: column;
     min-height: 100vh;
     width: 100%;
     background-image: url(image/bg01.png);
     background-position: center;
     background-size: cover;
     position: relative;
-    align-content: center;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
 }
 
 
 .hero-img img {
-    width: 400px;
+    width: 300px;
     padding-top: 100px;
+    position: relative;
+    bottom: 30px;
 }
 
 
 .hero-text {
-    padding: 150px 30px;
-    line-height: 40px;
+    justify-content: center;
+    align-content: center;
 }
 
 .hero-text h2 {
@@ -121,6 +117,10 @@ body {
     font-size: 50px;
     line-height: 50px;
     color: black;
+    text-align: center;
+    padding: 5%;
+    position: relative;
+    top: 50px;
 }
 
 .hero-text span {
@@ -130,25 +130,36 @@ body {
 .hero-text p {
     font-family: "Montserrat", sans-serif;
     line-height: 20px;
-    padding-top: 10px;
-    font-size: 15px;
-    font-weight: 500;
+    padding: 15%;
+    font-size: 100%;
+    font-weight: 600;
     color: rgb(49, 49, 49);
-    width: 450px;
+    text-align: center;
 }
 
 
+.c2a {
+    margin-top: -30px;
+}
+
+
+
+
 .c2a button {
+    display: block;
     background-color: rgb(199, 9, 9);
     border: none;
     border-radius: 4px;
-    width: 30%;
-    height: 37px;
+    width: 50%;
+    height: 60px;
     position: relative;
     color: white;
-    top: 15px;
     cursor: pointer;
     transition: all .42s ease;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+    font-size: 100%;
+    
 }
 
 .c2a button:hover {
@@ -201,6 +212,7 @@ body {
     background-color: white;
     padding-top: 80px;
     margin-bottom: 150px;
+    max-width: 100%;
 }
 
 
@@ -214,23 +226,23 @@ body {
 
 .p-imagegfather {
     display: grid;
-    grid-template-columns: repeat(4, 260px);
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     gap: 30px;
-    padding-left: 80px;
+    padding:20px;
 }
 
 
 .p-imagegrandmother {
     display: flex;
     flex-direction: column;
-    width: 260px;
+    width: 100%;
     padding-top: 40px;
 }
 
 
 
 .p-imagemother img {
-    width: 250px;
+    width: 100%;
 
 }
 
@@ -249,7 +261,7 @@ body {
 
 
 .pimgtext span {
-    padding-left: 150px;
+    padding-left: 10px;
     font-size: 12px;
 }
 
@@ -259,20 +271,23 @@ body {
     background-color: rgb(199, 9, 9);
     border: none;
     border-radius: 4px;
-    width: 20%;
-    height: 45px;
+    width: 50%;
+    height: 60px;
     position: relative;
     color: white;
     top: 15px;
     cursor: pointer;
     transition: all .42s ease;
-    margin-left: 500px;
+    margin-left: 100px;
     margin-top: 60px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 100%;
 }
 
 .p-button button:hover {
     background-color: black;
 }
+
 
 /*=========Standard Shoke========*/
 
@@ -280,36 +295,62 @@ body {
 #standard {
     background-color: #fff4f3;
     height: 200px;
+    align-items: center;
 }
 
 
-.mainiconbox {
-    display: flex;
-    flex-direction: row;
-    padding: 50px;
+.mainiconbox{
+    display: grid;
+    flex-direction: column;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    justify-content: space-between;
 }
 
 .s-iconbox {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    flex-direction: column;
     padding: 45px;
+    position: relative;
+    grid-column-gap: 20px;
+    margin-bottom: -50px;
+    justify-items: center;
+    
 }
 
+
+.icontext {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    padding-top: 30px;
+    position: relative;
+    left: 10px;
+    
+}
 
 .s-iconbox span {
+    font-size: 40px;
+    position: relative;
+    padding-left: 20px;
     color: rgb(199, 9, 9);
+    align-items: center;
+    justify-content: center;
 }
-
 
 .s-iconbox h4 {
     color: rgb(199, 9, 9);
     font-family: "Open Sans", sans-serif;
+    font-size: 120%;
+    margin-bottom: 10px;
 }
 
 .s-iconbox p {
     color: rgb(39, 39, 39);
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
+    font-weight: 600;
 }
 
 .icontext {
@@ -325,36 +366,23 @@ body {
     background-color: #fff4f3;
     justify-content: space-evenly;
     display: flex;
-    flex-direction: row;
-    padding-top: 100px;
+    flex-direction: column;
+    padding-top: 300px;
     padding-bottom: 100px;
+    align-content: center;
+    text-align: center;
 }
 
-/* .o-image {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid rgb(20, 20, 20);
-    border-radius: 10px;
-    width: 320px;
-    height:200px;
-    color: white;
-    align-content: center;
-    position: relative;
-    
-    margin-top: 70px;
-} */
-
 .o-image img{
-    width: 400px;
+    width: 100%;
     border-radius: 2px;
-    /* background-color: rgb(199, 9, 9); */
+    padding-top: 10%;
     
 }
 
 .o-text {
     padding-top: 80px;
-    /* padding-left: 150px;
-    padding-right: 100px; */
+    
 }
 
 .o-text h3 {
@@ -363,559 +391,144 @@ body {
 }
 
 .o-text p {
-    width: 300px;
+    width: 100%;
     color: rgb(39, 39, 39);
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     padding-top: 20px;
+    font-weight: 600;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
 
 
 
+.container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: rgb(199, 9, 9);
+    margin-bottom: 100px;
+  }
 
+  .van {
+    position: absolute;
+    top: 40%;
+    right: -200px;
+    transform: translate(0, -50%);
+    width: 200px;
+    height: 100px;
+    background-image: url('image/van.png'); 
+    background-size: cover;
+    animation: moveVan 5s linear infinite;
+  }
 
-
-
-
-/*=========Responsiveness For Mobile========*/
-
-/*=============MediaQuery for Hero==========*/
-
-
-@media(max-width:390px){
-
-
-
-
-    
-    .header {
-        height: 12dvh;
-        display: flex;
-        align-content: center;
-        justify-content: space-between;
-        padding: 30px;
-        background-color: white;
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-        background-size: cover;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-
-
-
-        
-    .logo img {
-        width: 50px;
-    }
-
-    .cart span {
-        font-size: 40px;
-    }
-
-
-
-   #hero-image {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+  .reveal-text {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 24px; /* Adjust font size as needed */
+    color: #fff;
+    opacity: 0;
+    animation: revealText 5s linear infinite;
+    font-family: "Montserrat", sans-serif;
     justify-content: center;
-    grid-template-columns: 1fr;
-   }
-
-   .hero-text {
-    padding: 80px 30px;
-    line-height: 40px;
-    }
-
-    .hero-text h2 {
-        font-family: "Open Sans", sans-serif;
-        font-size: 50px;
-        line-height: 50px;
-        color: black;
-        text-align: center;
-        width: 100%;
-    }
-
-    .hero-text p {
-        font-family: "Montserrat", sans-serif;
-        line-height: 25px;
-        padding-top: 20px;
-        font-size: 18px;
-        color: rgb(49, 49, 49);
-        text-align: center;
-        width: auto;
-        
-    }
-
-    .c2a button {
-        margin-left: 70px;
-        width: 200px;
-        height: 65px;
-        font-size: 20px;
-        top: 20px;
-    }
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
     
-    .hero-img img{
-    width: 350px;
-    padding-top: 10px;
-    padding-left: 40px;
+  }
 
+
+
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color:rgb(199, 9, 9); 
+    animation: revealText 5s linear infinite;
+  }
+
+  @keyframes moveVan {
+    0% {
+      right: 0;
     }
-
-    .greetings {
-        font-family: "Open Sans", sans-serif;
-        font-size: 25px;
-        display: none;
+    50% {
+      right: 50%;
     }
-
-    /*==========Product Image Media Query=============*/
-
-
-    #product {
-        background-color: white;
-        
+    100% {
+      right: 100%;
     }
-    
+  }
 
-
-
-    .p-text {
-    display: flex;
-    justify-content: center;
-    font-family: "Open Sans", sans-serif;
-    color: rgb(199, 9, 9);
+  @keyframes revealText {
+    0% {
+      opacity: 0;
     }
-
-    .p-imagegfather {
-        display: grid;
-        grid-template-columns: repeat(2, 150px);
-        gap: 30px;
-        position: relative;
-        left: -50px;
+    25% {
+      opacity: 0;
     }
-
-    .p-imagegrandmother {
-        display: grid;
-        flex-direction: column;
-        padding-top: 40px;
-        width: 150px;
-
+    50% {
+      opacity: 1;
     }
-
-
-    .p-imagemother img {
-        width: 150px;
-    
+    75% {
+      opacity: 0;
     }
-    
-
-
-
-    .p-button button {
-        background-color: rgb(199, 9, 9);
-        border: none;
-        border-radius: 4px;
-        width: 50%;
-        height: 60px;
-        font-family: "Open Sans", sans-serif;
-        font-size: 18px;
-        position: relative;
-        color: white;
-        top: 15px;
-        cursor: pointer;
-        transition: all .42s ease;
-        margin-left: 100px;
-        margin-top: 60px;
+    100% {
+      opacity: 0;
     }
+    100% {
+        opacity: 1;
+      }
+  }
 
-
-    .pimgtext span {
-    padding-left: 10px;
-    font-size: 15px;
-    }
-
-/*==========Query for Standard============*/
-
-
-     #standard {
-    background-color: #fff4f3;
-    height: 700px;
-    align-content: center;
-    margin-top: -50px;
-   }
-
-
-    /* .mainiconbox{
-        display: grid;
-        flex-direction: column;
-    }
-    
-
-    .s-iconbox {
-        display: grid;
-        flex-direction: column;
-        padding: 45px;
-        position: relative;
-    }
-
-    .icontext {
-        position: block;
-        justify-content: center;
-        text-align: center;
-        padding-top: 30px;
-        
-    }
-
-    .s-iconbox span {
-        font-size: 40px;
-        position: relative;
-        padding-left: 80px;
-    }
-
-    .icontext h4 {
-        font-size: 20px;
-    }
-
-    .icontext p {
-        font-size: 15px;
-    } */
-
-
-
-    .mainiconbox{
-        display: grid;
-        flex-direction: column;
-        position: relative;
-        top: -10px;
-        left: -10px;
-        justify-content: space-between;
-    }
-    
-
-    .s-iconbox {
-        display: grid;
-        flex-direction: column;
-        /* padding: 45px; */
-        position: relative;
-        margin-bottom: -50px;
-        
-    }
-
-    .icontext {
-        position: relative;
-        justify-content: center;
-        text-align: center;
-        padding-top: 30px;
-        
-    }
-
-    .s-iconbox span {
-        font-size: 40px;
-        position: relative;
-        padding-left: 80px;
-    }
-
-    .icontext h4 {
-        font-size: 20px;
-    }
-
-    .icontext p {
-        font-size: 15px;
-        padding-top: 5px;
-    }
+  .animatedbutton {
+    padding: 15px 30px;
+    background-color: #fefeff;
+    color: #e23535;
+    border: none;
+    border-radius: 4px;
+    /* margin-left: 140px; */
+    margin-top: 180px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+  }
 
 
 
 
+  /*=========Footer========*/
 
 
+  #footer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  }
 
+  .paytext {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 40px;
+  }
 
-/*==========Query for All Sizes============*/
+  .payment-icon img {
+    width: 250px;
+    margin-bottom: 40px
+  }
 
-    #o-products {
-        background-color: #fff4f3;
-        justify-content: space-evenly;
-        display: flex;
-        flex-direction: column;
-        padding-top: 10px;
-        padding-bottom: 70px;
-    }
-
-
-
-    .o-text {
-        justify-content: center;
-        padding-left: 15px;
-        text-align: center;
-        padding-top: 20px;
-    }
-
-
-    .o-text p {
-        left: 15px;
-        margin-left: 25px;
-    }
-
-
-    .o-image img {
-        padding-top: 40px;
-        width: 100%;
-    }
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-@media(max-width:360px){
-
-
-    .header {
-        height: 12dvh;
-        display: flex;
-        align-content: center;
-        justify-content: space-between;
-        padding: 30px;
-        background-color: white;
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-        background-size: cover;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-
-
-
-        
-    .logo img {
-        width: 50px;
-    }
-
-    .cart span {
-        font-size: 40px;
-    }
-
-
-
-    #hero-image {
-     display: flex;
-     flex-direction: column;
-     align-content: center;
-     justify-content: center;
-     grid-template-columns: 1fr;
-    }
- 
-    .hero-text {
-     padding: 80px 20px;
-     line-height: 40px;
-     }
- 
-     .hero-text h2 {
-         font-family: "Open Sans", sans-serif;
-         font-size: 50px;
-         line-height: 50px;
-         color: black;
-         text-align: center;
-         width: 100%;
-     }
- 
-     .hero-text p {
-         font-family: "Montserrat", sans-serif;
-         line-height: 25px;
-         padding-top: 20px;
-         font-size: 18px;
-         color: rgb(49, 49, 49);
-         text-align: center;
-         width: auto;
-         
-     }
- 
-     .c2a button {
-         margin-left: 70px;
-         width: 200px;
-         height: 65px;
-         font-size: 20px;
-         top: 20px;
-     }
-     
-     .hero-img img{
-     width: 300px;
-     padding-top: 10px;
-     margin-left: 10px;
-     margin-bottom: 20px;
- 
-     }
- 
-     .greetings {
-         font-family: "Open Sans", sans-serif;
-         font-size: 25px;
-         display: none;
-     }
- 
-     /*==========Product Image Media Query=============*/
- 
- 
-     #product {
-         background-color: white;
-         
-     }
-     
- 
- 
- 
-     .p-text {
-     display: flex;
-     justify-content: center;
-     font-family: "Open Sans", sans-serif;
-     color: rgb(199, 9, 9);
-     }
- 
-     .p-imagegfather {
-         display: grid;
-         grid-template-columns: repeat(2, 150px);
-         gap: 30px;
-         position: relative;
-         left: -65px;
-     }
- 
-     .p-imagegrandmother {
-         display: grid;
-         flex-direction: column;
-         padding-top: 40px;
-         width: 150px;
- 
-     }
- 
- 
-     .p-imagemother img {
-         width: 150px;
-     
-     }
-     
- 
- 
- 
-     .p-button button {
-         background-color: rgb(199, 9, 9);
-         border: none;
-         border-radius: 4px;
-         width: 50%;
-         height: 60px;
-         font-family: "Open Sans", sans-serif;
-         font-size: 18px;
-         position: relative;
-         color: white;
-         top: 15px;
-         cursor: pointer;
-         transition: all .42s ease;
-         margin-left: 100px;
-         margin-top: 60px;
-     }
- 
- 
-     .pimgtext span {
-     padding-left: 10px;
-     font-size: 15px;
-     }
- 
- /*==========Query for Standard============*/
- 
- 
-    #standard {
-     background-color: #fff4f3;
-     height: 700px;
-     align-content: center;
-     margin-top: -50px;
-    }
- 
- 
-     .mainiconbox{
-         display: grid;
-         flex-direction: column;
-         position: relative;
-         top: -10px;
-         left: -10px;
-         justify-content: space-between;
-     }
-     
- 
-     .s-iconbox {
-         display: grid;
-         flex-direction: column;
-         /* padding: 45px; */
-         position: relative;
-         margin-bottom: -50px;
-         
-     }
- 
-     .icontext {
-         position: relative;
-         justify-content: center;
-         text-align: center;
-         padding-top: 30px;
-         
-     }
- 
-     .s-iconbox span {
-         font-size: 40px;
-         position: relative;
-         padding-left: 80px;
-     }
- 
-     .icontext h4 {
-         font-size: 20px;
-     }
- 
-     .icontext p {
-         font-size: 15px;
-         padding-top: 5px;
-     }
- 
- /*==========Query for All Sizes============*/
- 
-     #o-products {
-        background-color: #fff4f3;
-         justify-content: space-evenly;
-         display: flex;
-         flex-direction: column;
-         padding-top: 10px;
-         padding-bottom: 70px;
-     }
- 
- 
- 
-     .o-text {
-         justify-content: center;
-         padding-left: 15px;
-         text-align: center;
-         padding-top: 20px;
-     }
- 
- 
-     .o-text p {
-         left: 15px;
-         margin-left: 15px;
-     }
- 
- 
-     .o-image img {
-         padding-top: 40px;
-         width: 100%;
-     }
- 
- 
- 
- 
- }
+  .copyright {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+  }
