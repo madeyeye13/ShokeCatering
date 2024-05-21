@@ -41,8 +41,17 @@ body {
     font-size: 50px;
 }
 
+
+.cart a {
+  color: black
+}
+
 .greetings {
     display: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*=============Delivery Message==========*/
@@ -535,4 +544,16 @@ body {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 10px;
+  }
+
+  .done {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding-top: 20px;
+  }
+
+  .done a {
+    text-decoration: underline;
+    color: #e23535;
   }
